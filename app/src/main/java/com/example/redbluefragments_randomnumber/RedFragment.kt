@@ -40,7 +40,7 @@ class RedFragment : Fragment() {
 
     private fun sendRandomNumber() {
         val random = Random.nextInt(100) // 0-99
-        randomNumberViewModel.randomNumber = random
+        randomNumberViewModel.randomNumber.value = random
 
         parentFragmentManager.setFragmentResult(RANDOM_NUMBER_GEN, Bundle.EMPTY)
     }
